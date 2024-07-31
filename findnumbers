@@ -1,0 +1,28 @@
+Program to find the numbers in input from a given range
+----------------------------------------------------------------------
+
+#include <stdio.h>
+
+int main()
+{
+int n,range,k;
+scanf("%d %d",&n,&range);
+int a[n],i,count=0,j,start,end;
+for(i=0;i<n;i++)
+scanf("%d",&a[i]);
+for(int j=1;j<=range;j++)
+{
+    scanf("%d %d",&start,&end);
+    for(int k=0;k<n;k++)
+    {
+        if(a[k]>=start&&a[k]<=end)
+        {
+            count++;
+            
+        }
+    }
+    printf("%d",count);
+    count=0;
+}
+    return 0;
+}
